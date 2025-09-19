@@ -11,4 +11,6 @@ public interface PersonService {
     List<Person> getPersonStartWith(String name);
 
     String deleteById(String id);
+
+    List<Person> getPersonByAge(Integer minAge, Integer maxAge);
 }
