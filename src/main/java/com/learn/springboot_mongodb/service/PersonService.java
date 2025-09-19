@@ -9,4 +9,6 @@ public interface PersonService {
     String save(Person person);
 
     List<Person> getPersonStartWith(String name);
+
+    String deleteById(String id);
 }

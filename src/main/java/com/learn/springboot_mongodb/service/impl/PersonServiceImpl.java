@@ -23,4 +23,10 @@ public class PersonServiceImpl implements PersonService {
     public List<Person> getPersonStartWith(String name) {
         return personRepository.findByFirstNameStartsWith(name);
     }
+
+    @Override
+    public String deleteById(String id) {
+        personRepository.deleteById(id);
+        return id + " has been deleted successfully";
+    }
 }
