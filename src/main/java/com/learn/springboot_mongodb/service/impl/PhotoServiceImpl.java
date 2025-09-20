@@ -25,4 +25,11 @@ public class PhotoServiceImpl implements PhotoService {
         photo.setPhoto(new Binary(BsonBinarySubType.BINARY, image.getBytes()));
         return photoRepository.save(photo).getId();
     }
+
+    @Override
+    public Photo getPhoto(String id) {
+        return photoRepository.findById(id).get();
+    }
+
+
 }
