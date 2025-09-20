@@ -26,6 +26,7 @@ public class PhotoController {
         return id;
     }
 
+    @GetMapping("/download/{id}")
     public ResponseEntity<Resource> downloadPhoto(@PathVariable String id) {
         Photo photo = photoService.getPhoto(id);
 
