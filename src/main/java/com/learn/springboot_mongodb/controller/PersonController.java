@@ -56,4 +56,9 @@ public class PersonController {
     public List<Document> getOldestPerson() {
         return personService.getOldestPersonByCity();
     }
+
+    @GetMapping("/populationByCity")
+    public List<Document> getPopulationByCity() {
+        return personService.getPopulationByCity();
+    }
 }
